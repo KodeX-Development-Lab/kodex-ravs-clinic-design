@@ -1,0 +1,206 @@
+<!DOCTYPE html><!--
+    * CoreUI - Free Bootstrap Admin Template
+    * @version v5.1.0
+    * @link https://coreui.io/product/free-bootstrap-admin-template/
+    * Copyright (c) 2024 creativeLabs Łukasz Holeczek
+    * Licensed under MIT (https://github.com/coreui/coreui-free-bootstrap-admin-template/blob/main/LICENSE)
+    -->
+<html lang="en">
+
+<head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="RAVS">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>RAVS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="57x57" href="../../assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../../assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Vendors styles-->
+    <link rel="stylesheet" href="../../vendors/simplebar/css/simplebar.css">
+    <link rel="stylesheet" href="../../css/vendors/simplebar.css">
+    <!-- Main styles for this application-->
+    <link href="../../css/style.css" rel="stylesheet">
+    <!-- We use those styles to show code examples, you should remove them in your application.-->
+    <link href="../../css/examples.css" rel="stylesheet">
+    <script src="../../js/config.js"></script>
+    <script src="../../js/color-modes.js"></script>
+    <link href="../../vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sidebar sidebar-dark sidebar-fixed border-end" id="sidebar">
+        <div class="sidebar-header border-bottom">
+            <div class="sidebar-brand">
+                RAVS
+            </div>
+            <button class="btn-close d-lg-none" type="button" data-coreui-dismiss="offcanvas" data-coreui-theme="dark"
+                aria-label="Close"
+                onclick="coreui.Sidebar.getInstance(document.querySelector(&quot;#sidebar&quot;)).toggle()"></button>
+        </div>
+        <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
+            <li class="nav-item"><a class="nav-link" href="../pet_info/index.html">
+                    <i class="fa-solid fa-cat me-2"></i> Pet Registration</a></li>
+            <li class="nav-item"><a class="nav-link" href="../incomes/index.html">
+                    <i class="fa-solid fa-file-invoice-dollar me-2"></i> Incomes</a></li>
+            <li class="nav-item"><a class="nav-link" href="../expenses/index.html">
+                    <i class="fa-solid fa-comments-dollar me-2"></i> Expenses</a></li>
+            <li class="nav-item"><a class="nav-link" href="../foreign_medicines/index.html">
+                    <i class="fa-solid fa-syringe me-2"></i> Foreign Medicine</a></li>
+            <li class="nav-title">Setting</li>
+            <li class="nav-item"><a class="nav-link" href="../doctors/index.html">
+                    <i class="fa-solid fa-user-doctor me-2"></i> Doctors</a></li>
+            <li class="nav-item"><a class="nav-link" href="../medicines/index.html">
+                    <i class="fa-solid fa-syringe me-2"></i> Medicines</a></li>
+            <li class="nav-item"><a class="nav-link" href="../expense_categories/index.html">
+                    <i class="fa-solid fa-list me-2"></i> Expense Categories</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pet_types/index.html">
+                    <i class="fa-solid fa-cat me-2"></i> Pet Types</a></li>
+            <li class="nav-item"><a class="nav-link" href="../seter_types/index.html">
+                    <i class="fa-solid fa-list-check me-2"></i> Seter Types</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../townships/index.html">
+                    <i class="fa-solid fa-location-dot me-2"></i> Townships</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="" @click.prevent="$root.submit();">
+                    <svg class="icon me-2">
+                        <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
+                    </svg> Logout</a>
+                </a>
+            </li>
+
+        </ul>
+        <div class="sidebar-footer border-top d-none d-md-flex">
+            <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
+        </div>
+    </div>
+    <div class="wrapper d-flex flex-column min-vh-100">
+        <header class="header header-sticky p-0 mb-4">
+            <div class="container-fluid border-bottom px-4">
+                <button class="header-toggler" type="button"
+                    onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()"
+                    style="margin-inline-start: -14px;">
+                    <svg class="icon icon-lg">
+                        <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
+                    </svg>
+                </button>
+                <a class="header-brand d-lg-none" href="/">
+                    RAVS
+                </a>
+                <ul class="header-nav">
+
+                    <li class="nav-item dropdown"><a class="nav-link py-0 pe-0" data-coreui-toggle="dropdown" href="#"
+                            role="button" aria-haspopup="true" aria-expanded="false">
+                            <div class="avatar avatar-md"><img class="avatar-img"
+                                    src="../../assets/img/avatars/user.png" alt="user@email.com">
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end pt-0">
+                            <div class="py-1 px-4 text-center">
+                                <div class="">RAVS</div>
+                                <div class="">admin@ravs.com</div>
+                            </div>
+                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
+
+                                <svg class="icon me-2">
+                                    <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
+                                </svg> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="body flex-grow-1">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    Add Township
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="mb-3 form-group {{ $errors->has('form.name') ? 'has-error' : ''}}">
+                                            <label for="name" class="form-label">Township Name</label>
+                                            <input wire:model="form.name" type="text" id="name" class="form-control"
+                                                aria-describedby="name">
+                                            <div class="form-text text-danger">Township is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4 mb-4">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="float-left">
+                                        <button wire:click="store" class="btn btn-primary btn-sm"><i
+                                                class="fa-solid fa-floppy-disk"></i>
+                                            Save
+                                        </button>
+                                        <a class="btn btn-secondary btn-sm cancel" type="button" href="./index.html">
+                                            <i class="fa-solid fa-ban"></i> Cancel
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer px-4">
+            <div><a href="https://coreui.io">CoreUI </a><a
+                    href="https://coreui.io/product/free-bootstrap-admin-template/">Bootstrap Admin Template</a> © 2024
+                creativeLabs.</div>
+            <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
+        </footer>
+    </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="../../vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <script src="../../vendors/simplebar/js/simplebar.min.js"></script>
+    <script>
+        const header = document.querySelector('header.header');
+
+        document.addEventListener('scroll', () => {
+            if (header) {
+                header.classList.toggle('shadow-sm', document.documentElement.scrollTop > 0);
+            }
+        });
+    </script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="../../vendors/chart.js/js/chart.umd.js"></script>
+    <script src="../../vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+        </script>
+    <script src="../../vendors/@coreui/utils/js/index.js"></script>
+    <script src="../../js/main.js"></script>
+    <script>
+    </script>
+
+</body>
+
+</html>
